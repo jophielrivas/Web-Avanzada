@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layout.html}">
+<head>
+    <title>Estudiantes CRUD</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link th:href="@{/style.css}" href="/style.css" rel="stylesheet" type="text/css" media="all"/>
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-md bg-light navbar-light">
+    <div class="container-fluid">
+        <!-- Toggler Button for Mobile View -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/estudiantes}">Estudiantes List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/estudiantes/new}">New Estudiante</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<h2>Estudiantes List</h2>
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Apellido</th>
+            <th>Nombre</th>
+            <th>Matricula</th>
+            <th>Telefono</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Use Thymeleaf iteration to populate the table with student data -->
+        <tr th:each="estudiante : ${estudiantes}">
+            <td th:text="${estudiante.id}"></td>
+            <td th:text="${estudiante.apellido}"></td>
+            <td th:text="${estudiante.nombre}"></td>
+            <td th:text="${estudiante.matricula}"></td>
+            <td th:text="${estudiante.telefono}"></td>
+            <td>
+                <a th:href="@{'/estudiantes/ver/' + ${estudiante.id}}" class="btn btn-primary">Ver</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

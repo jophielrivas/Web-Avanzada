@@ -1,0 +1,116 @@
+body {
+    background-color: #E1E1E1ED;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* CSS for Navigation Bar */
+h2 {
+    margin-bottom: 20px;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    padding-right: 15px;
+    padding-left: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f00;
+}
+
+/*CSS for the Table*/
+
+h2 {
+    padding-top: 40px;
+    text-align: center;
+}
+
+.btn-primary, .btn-primary:active, .btn-primary:visited{
+    background-color: orange !important;
+    border-color: #ff8c00 !important;
+}
+
+.btn-primary:hover {
+    background-color: #ff8c00 !important;
+}
+
+.table-responsive{
+    box-shadow: 0px 5px 10px 2px rgba(119, 118, 118, 0.8);
+    border-radius: 8px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+th {
+    background-color: gray;
+    text-align: center;
+    padding: 12px;
+    color: #f2f2f2;
+}
+
+td {
+    text-align: center;
+    padding: 12px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+th:first-child{
+    border-top-left-radius: 8px;
+}
+th:last-child{
+    border-top-right-radius: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    th {
+        text-align: center;
+    }
+
+    td {
+        text-align: center;
+    }
+
+    th {
+        float: left;
+    }
+
+    td {
+        float: left;
+        clear: left;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    th:first-child, td:first-child {
+        margin-left: 0;
+    }
+
+    th:last-child, td:last-child {
+        margin-right: 0;
+    }
+}
