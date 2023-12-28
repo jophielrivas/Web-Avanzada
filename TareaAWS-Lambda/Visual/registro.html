@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+        <title>Reserva de Laboratorios</title>
+    </head>
+    <bod>
+        <nav class="navbar navbar-dark bg-light">
+            <div class="container-fluid">
+            <img src="https://www.pucmm.edu.do/recursos/PublishingImages/Paginas/logos/Logo%20PUCMM%20%28L%C3%ADneas1%29.png" alt="" >
+              <form class="d-flex" method="get" action="https://reservas-laboratorio.s3.us-east-1.amazonaws.com/index.html">
+                <button class="btn btn-dark" onclick="this.parentNode.submit()">Ver Reservas Actuales</a>
+              </div>
+            </div>
+          </nav>
+          <h2 class="card-title text-center">Reservas de Laboratorio - EICT</h2>
+
+          <div class="card mx-auto" style="max-width: 50%;">
+            <div class="card-header">
+                <h5>Reservar laboratorio</h5>
+            </div>
+            <div class="card-body">
+                <form action="https://reservas-laboratorio.s3.us-east-1.amazonaws.com/index.html">
+                    <div class="mb-3">
+                        <label for="matricula" class="form-label">Matricula</label>
+                        <input type="text" class="form-control" id="matricula" name = "matricula" placeholder="Matricula">
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" name = "nombre" placeholder="Nombre">
+                    </div>
+                    <div class="mb-3">
+                        <label for="carrera" class="form-label">Carrera</label>
+                        <input type="text" class="form-control" id="carrera" name = "carrera" placeholder="Carrera">
+                    </div>
+                    <div class="mb-3">
+                        <label for="laboratorio" class="form-label">Laboratorio</label>
+                        <select id="laboratorio" name="laboratorio" class="form-select" aria-label="Default select example">
+                            <option selected>Seleccione un laboratorio</option>
+                            <option value="redes 1">Redes 1</option>
+                            <option value="redes 2">Redes 2</option>
+                            <option value="computacion 1">Computacion 1</option>
+                            <option value="Computacion 1">Computacion 1</option>
+                          </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="fecha" class="form-label">Fecha</label>
+                        <input class ="form-control" type="datetime-local" id="fecha" name="fecha">
+                    </div>
+                    <div class="mb-3">
+                        <input type="" value="Registrar" onclick="guardar()" class="btn btn-primary">
+                    </div>
+                </form>
+            </div>
+          </div>
+        <script>
+            function guardar(){
+                var data = $('form').serializeArray()
+                var reserva = {};
+                for (var i = 0; i < data.length; i++){
+                    reserva[data[i]['name']] = data[i]['value'];
+                }
+
+                var aux  ={
+                    "Nombre": data[0]['value'],
+                    "Fecha": data[1]['value'],
+                    "Carrera": data[2]['value'],
+                    "Matricula": data[3]['value'],
+                    "Laboratorio": data[4]['value']
+                }
+                aux = JSON.stringify(reserva)
+                console.log(aux) 
+                var url = "https://gh1rhthe41.execute-api.us-east-1.amazonaws.com/default/Reservas";
+
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', url);
+                xhr.onreadystatechange=(e)=>{
+                  console.log(e)
+              }
+                xhr.send(aux);
+                
+                
+            }
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </bod>
+</html>
