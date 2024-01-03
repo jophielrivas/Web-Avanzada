@@ -1,0 +1,20 @@
+2022-01-05 03:19:27,418 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$2cd9ddd1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-05 03:19:28,988 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: native
+2022-01-05 03:19:29,967 INFO org.springframework.cloud.context.scope.GenericScope [main] BeanFactory id=5154661a-4228-3d09-a9fc-98b19d61d956
+2022-01-05 03:19:30,135 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$2cd9ddd1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-05 03:19:30,926 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8888 (http)
+2022-01-05 03:19:30,940 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8888"]
+2022-01-05 03:19:30,942 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2022-01-05 03:19:30,943 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2022-01-05 03:19:31,015 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2022-01-05 03:19:31,015 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1996 ms
+2022-01-05 03:19:31,474 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-05 03:19:32,691 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-01-05 03:19:32,731 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8888"]
+2022-01-05 03:19:32,776 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8888 (http) with context path ''
+2022-01-05 03:19:33,474 INFO org.springframework.boot.StartupInfoLogger [main] Started ServidorConfigApplication in 7.899 seconds (JVM running for 8.875)
+2022-01-05 03:19:50,663 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8888-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-05 03:19:50,665 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8888-exec-1] Initializing Servlet 'dispatcherServlet'
+2022-01-05 03:19:50,674 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8888-exec-1] Completed initialization in 9 ms
+2022-01-05 03:19:51,532 INFO org.springframework.cloud.config.server.environment.NativeEnvironmentRepository [http-nio-8888-exec-1] Adding property source: file:D:/WorkSpaces/PUCMM/ProgramacionWebAvanzada/Web-Avanzada/Proyecto-Final/archivos-configuracion/final/servidor-eureka.properties
+2022-01-05 03:32:55,855 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'

@@ -1,0 +1,46 @@
+plugins {
+	id 'org.springframework.boot' version '2.6.2'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'eitc.pucmm'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+	maven { url 'https://repo.spring.io/milestone' }
+}
+
+ext {
+    set('springCloudVersion', "2021.0.0")
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.6.2'
+	implementation 'org.springframework.boot:spring-boot-starter-web:2.6.2'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools:2.6.2'
+	runtimeOnly 'mysql:mysql-connector-java:8.0.25'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.6.2'
+
+	implementation 'com.google.code.gson:gson:2.8.9'
+	implementation 'org.springframework.boot:spring-boot-starter-security:2.6.2'
+
+	//Librería para centralizar la configuración.
+	implementation 'org.springframework.cloud:spring-cloud-starter-config:3.1.0'
+	//Librería para agregar la notificación con Eureka.
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:3.1.0'
+
+}
+
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}
+
+test {
+	useJUnitPlatform()
+}

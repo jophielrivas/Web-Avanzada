@@ -1,0 +1,24 @@
+2022-01-04 17:53:13,986 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$ed668c12] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-04 17:53:15,761 INFO org.springframework.boot.SpringApplication [main] The following profiles are active: native
+2022-01-04 17:53:16,588 INFO org.springframework.cloud.context.scope.GenericScope [main] BeanFactory id=24f83789-c3bf-3f05-a529-2f10863f156e
+2022-01-04 17:53:16,703 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$ed668c12] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-04 17:53:16,880 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8888 (http)
+2022-01-04 17:53:16,887 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8888"]
+2022-01-04 17:53:16,888 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2022-01-04 17:53:16,888 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.27]
+2022-01-04 17:53:16,979 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2022-01-04 17:53:16,979 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1207 ms
+2022-01-04 17:53:17,294 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-04 17:53:19,126 INFO org.springframework.cloud.commons.util.InetUtils [main] Cannot determine local hostname
+2022-01-04 17:53:19,270 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-01-04 17:53:19,337 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8888"]
+2022-01-04 17:53:19,358 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8888 (http) with context path ''
+2022-01-04 17:53:20,981 INFO org.springframework.cloud.commons.util.InetUtils [main] Cannot determine local hostname
+2022-01-04 17:53:20,984 INFO org.springframework.boot.StartupInfoLogger [main] Started ServidorConfigApplication in 9.326 seconds (JVM running for 10.644)
+2022-01-04 17:53:22,067 INFO org.apache.juli.logging.DirectJDKLog [RMI TCP Connection(4)-169.254.5.127] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-04 17:53:22,069 INFO org.springframework.web.servlet.FrameworkServlet [RMI TCP Connection(4)-169.254.5.127] Initializing Servlet 'dispatcherServlet'
+2022-01-04 17:53:22,076 INFO org.springframework.web.servlet.FrameworkServlet [RMI TCP Connection(4)-169.254.5.127] Completed initialization in 7 ms
+2022-01-04 17:53:23,740 INFO org.springframework.cloud.commons.util.InetUtils [RMI TCP Connection(5)-169.254.5.127] Cannot determine local hostname
+2022-01-04 17:54:59,453 INFO org.springframework.cloud.commons.util.InetUtils [http-nio-8888-exec-1] Cannot determine local hostname
+2022-01-04 17:54:59,479 INFO org.springframework.cloud.config.server.environment.NativeEnvironmentRepository [http-nio-8888-exec-1] Adding property source: file:D:/WorkSpaces/PUCMM/ProgramacionWebAvanzada/Web-Avanzada/Proyecto-Final/archivos-configuracion/final/servidor-eureka.properties
+2022-01-04 17:55:15,287 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
